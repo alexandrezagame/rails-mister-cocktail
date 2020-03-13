@@ -1,3 +1,7 @@
+puts "destroy all database"
+Ingredient.destroy_all
+Cocktail.destroy_all
+Dose.destroy_all
 
 require 'open-uri'
 require 'json'
@@ -11,3 +15,13 @@ ingredient = Ingredient.new(
   )
 ingredient.save!
 end
+
+
+cocktail = Cocktail.create!(name: "caipirinha")
+dose = Dose.new
+dose.description = "200ml"
+dose.ingredient_id = Ingredient.first.id
+dose.cocktail_id = cocktail.id
+dose.save
+cocktail = Cocktail.create!(name: "vodka")
+cocktail = Cocktail.create!(name: "whisky")
