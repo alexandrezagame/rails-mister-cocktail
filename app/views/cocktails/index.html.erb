@@ -1,0 +1,25 @@
+<p id="notice">
+    <%= notice %>
+</p>
+<div class="row justify-content-center">
+    <div class="col-6">
+        <h1>Cocktail Index</h1>
+        <div class="border-top">
+            <ul class="list-group">
+                <% @cocktails.each do |cocktail| %>
+                <li class="list-group-item">
+                    <tr>
+                        <td>
+                            <%= cocktail.name %>
+                        </td>
+                        <td>
+                            <%= link_to 'Show', cocktail %>
+                        </td>
+                    </tr>
+                </li>
+                <% end %>
+            </ul>
+            <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %>
+        </div>
+    </div>
+</div>
