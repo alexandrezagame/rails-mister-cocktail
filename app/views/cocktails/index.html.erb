@@ -2,7 +2,14 @@
     <%= notice %>
 </p>
 <div class="row justify-content-center">
-    <div class="col-6">
+    <div class="col-12">
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+            <div class="container">
+                <h1>Welcome to <strong>Mister Cocktail</strong> an app for <strong>creative drinkers</strong>!</h1>
+                <p>Keep a list of your favorite drinks in one place</p>
+                <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %>
+            </div>
+        </div>
         <h1>Cocktail Index</h1>
         <div class="border-top">
             <ul class="list-group">
@@ -18,16 +25,18 @@
                 </li>
                 <% end %>
             </ul>
-            <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %>
+        </div>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="footer-copyright">
+                This footer is made with <i class="fas fa-heart"></i> by AZB
+            </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
