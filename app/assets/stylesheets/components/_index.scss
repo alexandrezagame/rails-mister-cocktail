@@ -19,10 +19,10 @@ h1 {
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
-// .container {
-//   max-width: 1000px;
-//   margin-top: 30px;
-// }
+.container-fluid {
+  max-width: 100%;
+  margin-top: 30px;
+}
 
   // display: grid;
   // grid-template-rows: 1fr 1fr 1fr;
@@ -39,3 +39,21 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+
+.card {
+  flex-direction: row;
+}
+
+.flex-item {
+  background-color: white;
+  margin: 3px;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.card-body {
+  background-color: grey;
+  margin: 5px;
+
+}
+

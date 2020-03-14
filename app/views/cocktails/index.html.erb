@@ -1,50 +1,49 @@
-<div class="flash flash-success alert alert-dismissible fade show" role="alert">
-    <span><strong>Yay!</strong> 🍸 you successfully added a new cocktail.</span>
-    <a data-dismiss="alert" aria-label="Close">
-        <i class="fas fa-times"></i>
-    </a>
-</div>
-<div class="row justify-content-align">
-    <div class="col-12">
-        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-            <div class="container">
-                <h1>Welcome to <strong>Mister Cocktail</strong> an app for <strong>creative drinkers</strong>!</h1>
-                <p>Keep a list of your favorite drinks in one place</p>
-                <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %>
-            </div>
+<div class="container-fluid">
+
+    <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+        <span><strong>Yay!</strong> 🍸 you successfully added a new cocktail.</span>
+        <a data-dismiss="alert" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </a>
+    </div>
+
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+        <div class="container">
+            <h1>Welcome to <strong>Mister Cocktail</strong> an app for <strong>creative drinkers</strong>!</h1>
+            <p>Keep a list of your favorite drinks in one place</p>
+            <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %>
         </div>
+    </div>
 
-
-
-            <div class="flex-container">
-                <div class="flex-item">
-                    <div class="card p-3 my-3" style="width: 300px;">
-                        <% @cocktails.each do |cocktail| %>
-                        <img src="https://source.unsplash.com/1600x900/?nature,water" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <%=  cocktail.name %>
-                            </h5>
-                            <%= link_to cocktail.name, cocktail, class: "btn btn-primary" %>
-                        </div>
-                        <% end %>
+    <div class="row">
+        <div class="col">
+            <div class="card-deck">
+                <div class="card">
+                    <% @cocktails.each do |cocktail| %>
+                    <div class="card-body">
+                        <img src="https://source.unsplash.com/200x200/?cocktail" class="card-img-top" alt="...">
+                        <h5 class="card-title">
+                            <%=  cocktail.name %>
+                        </h5>
+                        <%= link_to cocktail.name, cocktail, class: "btn btn-primary" %>
                     </div>
+                    <% end %>
                 </div>
-            </div>
-
-
-
-        <div class="footer">
-            <div class="footer-links">
-                <a href="https://github.com/alexandrezagame"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/iamalexbacelo/?hl=fr"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/azagame"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com/AlexandreZagame"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/alexandrezagame/"><i class="fab fa-linkedin"></i></a>
-            </div>
-            <div class="footer-copyright">
-                This footer is made with <i class="fas fa-heart"></i> by AZB
             </div>
         </div>
     </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/alexandrezagame"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/iamalexbacelo/?hl=fr"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/azagame"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/AlexandreZagame"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/alexandrezagame/"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-copyright">
+            This footer is made with <i class="fas fa-heart"></i> by AZB
+        </div>
+    </div>
+
 </div>
