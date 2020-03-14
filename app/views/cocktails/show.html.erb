@@ -1,19 +1,19 @@
 <% @cocktail.doses.each do |dose| %>
-  <div class="row justify-content-center">
+<div class="row justify-content-center">
     <div class="col-6">
-<p>
-    <div class="card-product">
-        <div class="card-product-infos">
-<h2>
-    <%= @cocktail.name %>
-</h2>
-            <%= cl_image_tag @cocktail.photo.key,
+        <p>
+            <div class="card-product">
+                <div class="card-product-infos">
+                    <h2>
+                        <%= @cocktail.name %>
+                    </h2>
+                    <%= cl_image_tag @cocktail.photo.key,
       width: 500, height: 400, crop: :fill %>
-    <%= dose.description %>
-    <%= dose.ingredient.name %>
-    <%= link_to 'Delete', dose_path(dose), method: :delete  %>
-</p>
-</div>
+                    <%= dose.description %>
+                    <%= dose.ingredient.name %>
+                    <%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}, class: "delete-button" %>
+        </p>
+    </div>
 </div>
 <% end %>
 <%= link_to "Add new dose", new_cocktail_dose_path(@cocktail)%>

@@ -1,10 +1,11 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 250px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+
 }
 
 .card-product img {
@@ -14,7 +15,7 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
@@ -31,11 +32,6 @@
   padding: 16px;
 }
 
-// .cards {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 16px;
-// }
 
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
