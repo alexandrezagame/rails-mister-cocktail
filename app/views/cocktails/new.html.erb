@@ -1,5 +1,15 @@
-<h1>New Cocktail</h1>
-
-<%= render 'form', cocktail: @cocktail %>
-
-<%= link_to 'Back', cocktails_path %>
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div class="card-trip">
+            <img src="https://images.pexels.com/photos/1028637/pexels-photo-1028637.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+            <div class="card-trip-infos">
+                <div>
+                    <h2>New Cocktail</h2>
+                    <%= render 'form', cocktail: @cocktail %>
+                    <%= link_to 'Back', cocktails_path %>
+                </div>
+                <!-- <h2 class="card-trip-pricing">£99.99</h2> -->
+            </div>
+        </div>
+    </div>
+</div>

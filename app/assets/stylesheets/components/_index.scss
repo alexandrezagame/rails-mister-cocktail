@@ -5,3 +5,15 @@
 @import "banner";
 @import "card_product";
 @import "footer";
+@import "new";
+
+
+h1 {
+  font-size: 50px;
+  color: #89023E;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}

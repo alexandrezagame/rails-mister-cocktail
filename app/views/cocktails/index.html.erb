@@ -10,7 +10,9 @@
                 <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %>
             </div>
         </div>
-        <h1>Cocktail Index</h1>
+
+
+        <h1>Your Cocktails</h1>
         <div class="border-top">
             <ul class="list-group">
                 <% @cocktails.each do |cocktail| %>
@@ -26,13 +28,15 @@
                 <% end %>
             </ul>
         </div>
+
+
         <div class="footer">
             <div class="footer-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/alexandrezagame"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/iamalexbacelo/?hl=fr"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/azagame"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/AlexandreZagame"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/alexandrezagame/"><i class="fab fa-linkedin"></i></a>
             </div>
             <div class="footer-copyright">
                 This footer is made with <i class="fas fa-heart"></i> by AZB
