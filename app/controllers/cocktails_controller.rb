@@ -22,6 +22,11 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new
   end
 
+  def destroy
+    @cocktail.destroy
+    redirect_to cocktails_path, notice: 'Cocktail was successfully destroyed.'
+  end
+
   private
 
   def cocktail_params

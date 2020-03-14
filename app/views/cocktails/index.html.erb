@@ -1,6 +1,9 @@
-<p id="notice">
-    <%= notice %>
-</p>
+<div class="flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Yay!</strong> 🍸 you successfully added a new cocktail.</span>
+  <a data-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
+</div>
 <div class="row justify-content-center">
     <div class="col-12">
         <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
@@ -16,19 +19,21 @@
         <div class="border-top">
             <ul class="list-group">
                 <% @cocktails.each do |cocktail| %>
-                <li class="list-group-item">
+                <li class="card-product">
+                  <div class="card-product-infos">
                     <tr>
                         <td>
                             <%= link_to cocktail.name, cocktail %>
                         </td>
                         <td>
+                          <%= link_to 'Delete', cocktail_path(cocktail), method: :delete  %>
                         </td>
                     </tr>
+                     </div>
                 </li>
                 <% end %>
             </ul>
-        </div>
-
+       </div>
 
         <div class="footer">
             <div class="footer-links">
