@@ -1,9 +1,9 @@
-<div class="flash flash-success alert alert-dismissible fade show" role="alert">
-    <span><strong>Yay!</strong> 🍸 you successfully added a new cocktail.</span>
-    <a data-dismiss="alert" aria-label="Close">
-        <i class="fas fa-times"></i>
-    </a>
-</div>
+<!--     <div class="flash flash-success alert alert-dismissible fade show" role="alert">
+        <span><strong>Yay!</strong> 🍸 you successfully added a new cocktail.</span>
+        <a data-dismiss="alert" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </a>
+    </div> -->
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
     <div class="container">
         <h1>Welcome to <strong>Mister Cocktail</strong> an app for <strong>creative drinkers</strong>!</h1>
@@ -12,14 +12,15 @@
     </div>
 </div>
 
-
-<div class="card">
-    <% @cocktails.each do |cocktail| %>
-    <div class="card-product">
-                <%= image_tag "https://source.unsplash.com/1200x900/?cocktail", class: "card-img-top"%>
-        <div class="card-product-infos">
-            <%= link_to cocktail.name, cocktail %>
+<div class="wrapper">
+    <div class="card">
+        <% @cocktails.each do |cocktail| %>
+        <div class="card-product">
+            <%= image_tag "https://source.unsplash.com/1200x900/?cocktail", class: "card-img-top"%>
+            <div class="card-product-infos">
+              <h2>  <%= link_to cocktail.name, cocktail %> </h2>
+            </div>
         </div>
+        <% end %>
     </div>
-    <% end %>
 </div>
