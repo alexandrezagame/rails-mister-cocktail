@@ -12,15 +12,15 @@
     </div>
 </div>
 
-<div class="wrapper">
+
     <div class="card">
         <% @cocktails.each do |cocktail| %>
-        <div class="card-product">
-            <%= image_tag "https://source.unsplash.com/1200x900/?cocktail", class: "card-img-top"%>
-            <div class="card-product-infos">
+        <div class="card-product" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/1200x900/?cocktail);">
+<!--
+ -->            <div class="card-product-infos">
               <h2>  <%= link_to cocktail.name, cocktail %> </h2>
             </div>
         </div>
         <% end %>
     </div>
-</div>
+

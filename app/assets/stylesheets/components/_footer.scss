@@ -4,24 +4,26 @@
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: white;
-  background-color: #1F0318;
+  color: #DFE8E9;
+  background-color: #344649;
 }
 .footer-links {
   display: flex;
   align-items: center;
-  color: white;
 }
 .footer-links a {
-  color: white;
-  opacity: 0.15;
+  color: #DFE8E9;
+  // opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
-  opacity: 1;
+  color: white;
 }
 .footer .fa-heart {
-  color: red;
+  color: #D23333;
+}
+.footer p {
+  color: #DFE8E9;
 }

@@ -1,31 +1,29 @@
-<div class="ingredientcontainer">
-
-    <h2>
-        <%= @cocktail.name %>
-    </h2>
-
-<div class="ingredientimage">
-    <%= cl_image_tag @cocktail.photo.key,
-      width: 500, height: 400, crop: :fill %>
-</div>
-
-    <% @cocktail.doses.each do |dose| %>
-    <div class="ingredientscard">
-        <h5>
-            <%= dose.description %>
-            <br>
-            <%= dose.ingredient.name %>
-            <br>
-            <%= link_to '<i class="fas fa-trash"></i>'.html_safe, dose_path(dose), method: :delete, data: {confirm: "Are you sure?"}, class: "delete-button" %>
-        </h5>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+    <div class="container">
+        <h1>Welcome to <strong>Mister Cocktail</strong> an app for <strong>creative drinkers</strong>!</h1>
+        <p>Create your cocktail</p>
     </div>
-    <% end %>
-
-
-
-    <%= link_to "Add new dose", new_cocktail_dose_path(@cocktail)%>
-    <%= link_to 'Back', cocktails_path  %>
-
 </div>
+
+<div class="card-product">
+    <div class="card-product-infos">
+            <h1>
+                <%= @cocktail.name %>
+            </h1>
+            <%= cl_image_tag @cocktail.photo.key,
+      width: 500, height: 400, crop: :fill %>
+            <% @cocktail.doses.each do |dose| %>
+            <p>
+                <%= dose.description %>
+                <br>
+                <%= dose.ingredient.name %>
+                <br>
+            <%= link_to 'Delete', dose_path(dose), method: :delete  %>
+            <%= link_to "Add new dose", new_cocktail_dose_path(@cocktail)%>
+            <%= link_to 'Back', cocktails_path  %>
+            </p>
+            <% end %>
+        </div>
+    </div>
 
 
